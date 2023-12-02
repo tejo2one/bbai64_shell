@@ -25,9 +25,10 @@ while true; do
 
     #write PWM duty cycle to device
 
-    echo 0 > /sys/class/pwm/pwmchip0/pwm1/enable    #disable pwm before write
+   
     echo 100 > /sys/class/pwm/pwmchip0/pwm1/period    #disable pwm before write
     echo $pwm_duty > /sys/class/pwm/pwmchip0/pwm1/duty_cycle    #disable pwm before write
+    echo 0 > /sys/class/pwm/pwmchip0/pwm1/enable    #disable pwm before write
     echo 1 > /sys/class/pwm/pwmchip0/pwm1/enable    #disable pwm before write
 
     #sleep for 1 second
